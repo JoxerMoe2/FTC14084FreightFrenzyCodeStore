@@ -8,32 +8,32 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 public class HardwareMap {
     //Create Motors
     public DcMotor frontRightMotor = null;
-    public DcMotor frontLeftMotor = null;
-    public DcMotor backRightMotor = null;
-    public DcMotor backLeftMotor = null;
+    public DcMotor frontLeftMotor  = null;
+    public DcMotor backRightMotor  = null;
+    public DcMotor backLeftMotor   = null;
 
     //Create Servo
-    public Servo servo1 = null;
+    public Servo servo1            = null;
 
     //Additional Variables
     com.qualcomm.robotcore.hardware.HardwareMap hardwareMap = null;
-    public ElapsedTime runtime = new ElapsedTime();
+    public ElapsedTime runtime     = new ElapsedTime();
 
     public HardwareMap(com.qualcomm.robotcore.hardware.HardwareMap hwMap) {
         initialize(hwMap);
     }
 
     private void initialize(com.qualcomm.robotcore.hardware.HardwareMap hwMap) {
-        hardwareMap = hwMap;
+        hardwareMap     = hwMap;
 
         //Init Motor Info
         frontRightMotor = hardwareMap.get(DcMotor.class, "frontRightMotor");
-        frontLeftMotor = hardwareMap.get(DcMotor.class, "frontLeftMotor");
-        backRightMotor = hardwareMap.get(DcMotor.class, "backRightMotor");
-        backLeftMotor = hardwareMap.get(DcMotor.class, "backLeftMotor");
+        frontLeftMotor  = hardwareMap.get(DcMotor.class, "frontLeftMotor");
+        backRightMotor  = hardwareMap.get(DcMotor.class, "backRightMotor");
+        backLeftMotor   = hardwareMap.get(DcMotor.class, "backLeftMotor");
 
         //Init Servo Info
-        servo1 = hardwareMap.get(Servo.class, "servo1");
+        servo1          = hardwareMap.get(Servo.class  , "servo1");
 
         //Set Motor Direction
         frontRightMotor.setDirection(DcMotor.Direction.FORWARD);
